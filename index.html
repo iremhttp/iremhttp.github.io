@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/glightbox.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
     <title>My Portfolio</title>
   </head>
   <body>
@@ -14,56 +15,66 @@
         <img class="hero-image" src="img/sky.jpeg" alt="main page image" />
       </section>
       <section class="hero-text-box">
+        <img
+          class="hero-profile-img"
+          src="img/profilepicture.png"
+          alt="iremhttp profile picture"
+        />
         <h1 class="hero-heading">Irem Hatipoglu</h1>
         <p class="hero-text">
           A diligent, passionate and versatile computer engineer who is a doer,
           not a talker.
         </p>
         <p>
+          <a href="#about">
+            <button type="button" class="hero-button">About Me</button>
+          </a>
           <a href="#portfolio">
-            <button type="button" class="hero-button">Portfolio</button>
+            <button type="button" class="hero-button">Projects</button>
           </a>
         </p>
       </section>
     </header>
     <!--End of Hero Header-->
-
-    <!--Portfolio-->
-    <section id="portfolio" class="portfolio-container">
-      <h1>Portfolio</h1>
-      <!-- Images in the home page-->
-      <section class="portfolio-gallery">
-        <div class="gallery-item">
-          <a
-            href="img/cliffsofmoher.jpeg"
-            class="glightbox"
-            data-glightbox="title: My title; description: this is the slide description"
-          >
-            <img
-              src="img/cliffsofmoher.jpeg"
-              alt="image1 of portfolio"
-              class="gallery-img"
-            />
+    <!--Begin About-->
+    <section id="about" class="about-container">
+      <section class="about-text">
+        <h1>About Me</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          similique nemo eum recusandae nam enim amet eveniet facere earum?
+          Asperiores aliquid non autem! Officiis soluta, commodi voluptatem
+          aliquam quae nobis.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat
+          asperiores enim ut nostrum modi omnis?
+        </p>
+        <div class="about-social">
+          <a href="mailto:hatipoglu.irem@hotmail.com" aria-label="Link to Mail">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
           </a>
-        </div>
-
-        <div class="gallery-item">
+          <a href="https://github.com/iremhttp" aria-label="Link to GitHub">
+            <i class="fab fa-github" aria-hidden="true"></i>
+          </a>
           <a
-            href="img/wp4195956.jpg"
-            class="glightbox"
-            data-glightbox="title: My title; description: this is the slide description"
+            href="www.linkedin.com/in/iremmhatipoglu"
+            aria-label="Link to Linkedin"
           >
-            <img
-              src="img/wp4195956.jpg"
-              alt="image2 of portfolio"
-              class="gallery-img"
-            />
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.artstation.com/iremhttp"
+            aria-label="Link to ArtStation"
+          >
+            <i class="fab fa-artstation" aria-hidden="true"></i>
           </a>
         </div>
       </section>
-    </section>
-    <!--End Portfolio-->
-
+      <section class="about-image">
+        <img src="" alt="iremhttp profile picture" />
+      </section>
+      <!--End About-->
     <script src="js/glightbox.min.js"></script>
     <script type="text/javascript">
       const lightbox = GLightbox({ loop: true });

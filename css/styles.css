@@ -139,10 +139,44 @@ img {
 .about-social {
   display: flex;
   justify-content: start;
+  align-content: center;
+  justify-content: center;
+  align-items: start;
 }
 .about-social a {
-  color: black;
+  color: rgb(96, 147, 174);
   padding: 0 1rem 1rem 1rem;
+}
+
+/* Portfolio Gallery Styles */
+.portfolio-container {
+  margin: 1rem auto 0 auto;
+  padding: 40px;
+}
+
+.portfolio-container h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.5rem;
+  grid-auto-rows: 300px;
+}
+.gallery-item {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery-img {
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s ease-in-out;
+}
+.gallery-img:hover {
+  transform: scale(1.5);
 }
 
 /* add media queries for large screens */

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glightbox.min.css" />
     <title>My Portfolio</title>
   </head>
   <body>
@@ -18,12 +19,54 @@
           A diligent, passionate and versatile computer engineer who is a doer,
           not a talker.
         </p>
+        <p>
+          <a href="#portfolio">
+            <button type="button" class="hero-button">Portfolio</button>
+          </a>
+        </p>
       </section>
     </header>
     <!--End of Hero Header-->
 
     <!--Portfolio-->
+    <section id="portfolio" class="portfolio-container">
+      <h1>Portfolio</h1>
+      <!-- Images in the home page-->
+      <section class="portfolio-gallery">
+        <div class="gallery-item">
+          <a
+            href="img/cliffsofmoher.jpeg"
+            class="glightbox"
+            data-glightbox="title: My title; description: this is the slide description"
+          >
+            <img
+              src="img/cliffsofmoher.jpeg"
+              alt="image1 of portfolio"
+              class="gallery-img"
+            />
+          </a>
+        </div>
 
+        <div class="gallery-item">
+          <a
+            href="img/wp4195956.jpg"
+            class="glightbox"
+            data-glightbox="title: My title; description: this is the slide description"
+          >
+            <img
+              src="img/wp4195956.jpg"
+              alt="image2 of portfolio"
+              class="gallery-img"
+            />
+          </a>
+        </div>
+      </section>
+    </section>
     <!--End Portfolio-->
+
+    <script src="js/glightbox.min.js"></script>
+    <script type="text/javascript">
+      const lightbox = GLightbox({ loop: true });
+    </script>
   </body>
 </html>

@@ -55,8 +55,9 @@
         />
         <h1 class="hero-heading">Irem Hatipoglu</h1>
         <p class="hero-text">
-          A diligent, passionate and versatile computer engineer who is a doer,
-          not a talker.
+          <span>Developer</span>
+          <span>Engineer</span>
+          <span>Artist</span>
         </p>
 
         <p>
@@ -219,6 +220,18 @@
           navbar.classList.add("navbar-visible");
         } else {
           navbar.classList.remove("navbar-visible");
+        }
+      });
+    </script>
+    <script>
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        var navbar = document.querySelector(".nav-bar");
+
+        if (window.pageYOffset > header.offsetHeight) {
+          navbar.classList.add("navbarnot-visible");
+        } else {
+          navbar.classList.remove("navbarnot-visible");
         }
       });
     </script>

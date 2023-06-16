@@ -42,6 +42,9 @@ img {
   background-color: azure;
   z-index: 100;
 }
+.navbarnot-visible {
+  display: none;
+}
 .logo,
 .nav-menu {
   text-transform: uppercase;
@@ -83,7 +86,7 @@ img {
 }
 .logo a {
   font-weight: 700;
-  font-size: 0.1rem;
+  font-size: 1rem;
 }
 .nav-menu a {
   font-weight: 400;
@@ -100,6 +103,7 @@ img {
   position: fixed;
   top: 0;
 }
+
 .top-nav .logo a,
 .top-nav .nav-menu a {
   color: white;
@@ -172,9 +176,25 @@ img {
   color: azure;
 }
 .hero-text {
+  font-family: "lora-regular", serif;
   font-size: 1rem;
   margin-top: 0.5rem;
-  color: azure;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: #ffffff;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text span {
+  display: inline-block;
+}
+
+.hero-text span:not(:last-child)::after {
+  content: "|";
+  text-align: center;
+  display: inline-block;
+  padding: 0 8px 0 14px;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .hero-button {
@@ -213,7 +233,8 @@ img {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 50px; /* Set the desired height for the navbar */
+  height: 50px;
+  padding: 20px;
 }
 .navbar a {
   color: white;
@@ -431,13 +452,17 @@ img {
     line-height: 2rem;
   }
   .nav-bar {
-    line-height: 1.5rem;
+    justify-content: space-between;
+    padding: 2rem 0;
+    line-height: 1rem;
   }
   .nav-menu {
-    padding: 0 1rem;
+    width: auto;
+    justify-self: end;
   }
-  .nav-item {
-    flex: 1 1;
+
+  .top-nav {
+    width: 100%;
   }
 }
 @media (min-width: 920px) {
@@ -479,6 +504,7 @@ img {
     width: auto;
     justify-self: end;
   }
+
   .top-nav {
     width: 100%;
   }

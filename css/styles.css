@@ -33,6 +33,7 @@ img {
 }
 
 /* hero styles */
+
 .hero-box {
   display: grid;
   grid-template-columns: 1fr;
@@ -44,7 +45,6 @@ img {
   height: 100%;
   width: 100%;
 }
-
 .hero-image-box {
   height: 100vh;
   width: 100%;
@@ -117,6 +117,31 @@ img {
 .hero-button:active {
   transform: scale(0.95);
 }
+/* Navbar Style*/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: none;
+}
+.navbar-visible {
+  display: block;
+}
+.navbar nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px; /* Set the desired height for the navbar */
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
 /*About Styles */
 
 .about-container {
@@ -146,6 +171,95 @@ img {
 .about-social a {
   color: rgb(96, 147, 174);
   padding: 0 1rem 1rem 1rem;
+}
+/* Education Styles */
+.edu-container .edu-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.edu-container .edu-timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background: #020133;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -2;
+}
+.edu-container .container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+.edu-container .container::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: rgb(255, 255, 255);
+  border: 4px solid rgb(96, 147, 174);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 100;
+}
+.edu-container .left {
+  left: 0;
+}
+.edu-container .right {
+  left: 50%;
+}
+.edu-container .left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid rgb(96, 147, 174);
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent rgb(96, 147, 174);
+}
+.edu-container .right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid rgb(96, 147, 174);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(96, 147, 174) transparent transparent;
+}
+.edu-container .right::after {
+  left: -16px;
+}
+.edu-container .content {
+  background-color: rgb(96, 147, 174);
+  position: relative;
+  border-radius: 6px;
+}
+.edu-container .content .tag {
+  font-size: 1.3rem;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+.edu-container .content .desc {
+  margin-left: 1.5rem;
+  padding-bottom: 1rem;
+}
+.edu-container .content .desc h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.edu-container .content .desc p {
+  font-size: 1.2rem;
 }
 
 /* Portfolio Gallery Styles */

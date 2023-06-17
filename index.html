@@ -73,9 +73,8 @@
     <section class="navbar">
       <nav>
         <a href="#about">About</a>
+        <a href="#education">Education & Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
         <a href="#portfolio">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -104,51 +103,63 @@
       </div>
     </section>
     <!--End About-->
+
+    <!--Begin Education and Experience-->
+    <section id="education" class="edu-container">
+      <div class="wrap">
+        <button id="switchButton" class="switch">Education & Experience</button>
+      </div>
+      <div class="timeline">
+        <div class="study">
+          <div class="timeline-item">
+            <div class="timeline-headline">
+              <p class="timeline-subtitle">Sep 2019 - present</p>
+              <h2 class="timeline-title">Bachelor of Computer Engineering</h2>
+              <p class="timeline-excerpt">Izmir University of Economics</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-headline">
+              <p class="timeline-subtitle">Mar 2022 - Sep 2022</p>
+              <h2 class="timeline-title">Bachelor of Computer Engineering</h2>
+              <p class="timeline-excerpt">
+                Technical University of Applied Sciences Würzburg - Schweinfurt
+                (ERASMUS+)
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-headline">
+              <p class="timeline-subtitle">Sep 2021 - Feb 2022</p>
+              <h2 class="timeline-title">Bachelor of Computer Science</h2>
+              <p class="timeline-excerpt">Maynooth University (ERASMUS+)</p>
+            </div>
+          </div>
+        </div>
+        <div class="work">
+          <div class="timeline-item">
+            <div class="timeline-headline">
+              <p class="timeline-subtitle">June 2023 - present</p>
+              <h2 class="timeline-title">Software Engineer Intern</h2>
+              <p class="timeline-excerpt">Yapi Kredi Technology</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-headline">
+              <p class="timeline-subtitle">Jan 2023 - Feb 2023</p>
+              <h2 class="timeline-title">Software Developer Intern</h2>
+              <p class="timeline-excerpt">Glimspe Group - QReal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Education and Experience-->
     <!--Begin Skills-->
     <section id="skills" class="skills-container">
       <h1>Skills</h1>
     </section>
     <!--End Skills-->
-    <!--Begin Education-->
-    <section id="education" class="edu-container">
-      <h1>Education</h1>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-photo">
-            <img src="img/ieu.png" />
-          </div>
-          <div class="timeline-headline">
-            <p class="timeline-subtitle">Sep 2019 - present</p>
-            <h2 class="timeline-title">Bachelor of Computer Engineering</h2>
-            <p class="timeline-excerpt">Izmir University of Economics</p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-photo">
-            <img src="img/fhws.png" />
-          </div>
-          <div class="timeline-headline">
-            <p class="timeline-subtitle">Mar 2022 - Sep 2022</p>
-            <h2 class="timeline-title">Bachelor of Computer Engineering</h2>
-            <p class="timeline-excerpt">
-              Technical University of Applied Sciences Würzburg - Schweinfurt
-              (ERASMUS+)
-            </p>
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-photo">
-            <img src="img/mu.png" />
-          </div>
-          <div class="timeline-headline">
-            <p class="timeline-subtitle">Sep 2021 - Feb 2022</p>
-            <h2 class="timeline-title">Bachelor of Computer Science</h2>
-            <p class="timeline-excerpt">Maynooth University (ERASMUS+)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--End Education-->
     <!--Portfolio-->
     <section id="portfolio" class="portfolio-container">
       <h1>Projects</h1>
@@ -232,6 +243,18 @@
         } else {
           navbar.classList.remove("navbarnot-visible");
         }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const switchButton = document.getElementById("switchButton");
+        const study = document.querySelector(".study");
+        const work = document.querySelector(".work");
+
+        switchButton.addEventListener("click", function () {
+          study.classList.toggle("work");
+          work.classList.toggle("hidden");
+        });
       });
     </script>
   </body>

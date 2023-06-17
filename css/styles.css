@@ -250,17 +250,23 @@ img {
   margin: 1rem auto 0 auto;
   padding: 40px;
   font-family: "Jura", serif;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
 }
 .about-text {
   margin: 0 auto;
 }
 .about-text h1 {
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #070707;
 }
 .about-image img {
   height: 100%;
   object-fit: cover;
+  max-width: 100%;
 }
 .about-social {
   display: flex;
@@ -272,6 +278,15 @@ img {
 .about-social a {
   color: rgb(96, 147, 174);
   padding: 0 1rem 1rem 1rem;
+}
+.about-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
 }
 /* Skills Styles */
 .skills-container h1 {
@@ -500,6 +515,10 @@ img {
     width: 300px;
     float: right;
   }
+  .about-circle {
+    width: 600px;
+    height: 600px;
+  }
 }
 @media (min-width: 920px) {
   .hero-heading {
@@ -517,9 +536,13 @@ img {
     width: 300px;
     height: 300px;
   }
-  .portfolio-container,
-  .about-container {
+  .portfolio-container {
     max-width: 1400px;
+  }
+  .about-container {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin-top: 4rem;
   }
   .portfolio-container h1,
   .about-text h1,
@@ -544,5 +567,9 @@ img {
 
   .top-nav {
     width: 100%;
+  }
+  .about-circle {
+    width: 700px;
+    height: 700px;
   }
 }

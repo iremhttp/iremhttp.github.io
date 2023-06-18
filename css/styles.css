@@ -657,12 +657,31 @@ img {
 .portfolio-container {
   margin: 10rem auto 0 auto;
   padding: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-
 .portfolio-container h1 {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #804854;
+  font-family: "Copperplate", serif;
+}
+.portfolio-container h2 {
   font-size: 2rem;
   line-height: 2rem;
   font-family: "Jura", serif;
+  color: #445962;
+  font-family: "Copperplate", serif;
+}
+.port-description {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: "Jura", serif;
+  padding: 10px;
+  color: #8d8c8c;
 }
 
 .portfolio-gallery {
@@ -774,6 +793,11 @@ img {
     font-size: 60px;
     margin: 20px;
   }
+  .port-description {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-family: "Jura", serif;
+  }
 }
 @media (min-width: 920px) {
   .hero-heading {
@@ -799,7 +823,7 @@ img {
     grid-gap: 1rem;
     margin-top: 4rem;
   }
-  .portfolio-container h1,
+  .portfolio-container h2,
   .about-text h1,
   .edu-container h1,
   .skills-container h1 {

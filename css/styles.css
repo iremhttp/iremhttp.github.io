@@ -600,6 +600,7 @@ img {
   display: inline-block;
   padding: 0;
   text-align: center;
+  display: none;
 }
 .serviceBox .progress > li {
   display: inline-block;
@@ -649,7 +650,6 @@ img {
 .serviceBox .description {
   display: none;
 }
-
 .serviceBox.active .description {
   display: block;
 }

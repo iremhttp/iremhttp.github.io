@@ -157,7 +157,34 @@
     <!--End Education and Experience-->
     <!--Begin Skills-->
     <section id="skills" class="skills-container">
-      <h1>Skills</h1>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="serviceBox">
+            <div class="service-icon fas fa-cogs"></div>
+            <h3 class="title">Hard Skills</h3>
+            <p class="description">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab dolor
+              eveniet repellat, natus deleniti consequuntur explicabo nesciunt
+              vel saepe qui! Voluptates vitae magnam expedita excepturi
+              quibusdam obcaecati illo. Ipsam, omnis?
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="serviceBox">
+            <div class="service-icon fas fa-users"></div>
+            <h3 class="title">Soft Skills</h3>
+            <p class="description"></p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="serviceBox">
+            <div class="service-icon fa fa-globe"></div>
+            <h3 class="title">Languages</h3>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
     </section>
     <!--End Skills-->
     <!--Portfolio-->
@@ -254,6 +281,17 @@
         switchButton.addEventListener("click", function () {
           study.classList.toggle("work");
           work.classList.toggle("hidden");
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const serviceBoxes = document.querySelectorAll(".serviceBox");
+
+        serviceBoxes.forEach(function (box) {
+          box.addEventListener("click", function () {
+            this.classList.toggle("active");
+          });
         });
       });
     </script>

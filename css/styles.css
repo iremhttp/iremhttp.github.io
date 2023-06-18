@@ -513,7 +513,74 @@ img {
 .skills-container {
   margin: 10rem auto 0 auto;
   padding: 40px;
+  font-family: "Jura", serif;
 }
+.serviceBox {
+  text-align: center;
+}
+.serviceBox .service-icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 50%;
+  background: #8dafc4;
+  margin-bottom: 25px;
+  font-size: 40px;
+  color: #fff;
+  transition: all 0.5s ease 0s;
+}
+.serviceBox:hover .service-icon {
+  transform: scale(1.1);
+}
+.serviceBox .title {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  color: #471437;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+  position: relative;
+}
+.serviceBox .title:before,
+.serviceBox .title:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #8dafc4;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  opacity: 0;
+  transition: all 0.5s ease 0s;
+}
+.serviceBox .title:after {
+  left: auto;
+  right: 40%;
+}
+.serviceBox:hover .title:before {
+  opacity: 1;
+  left: 5%;
+}
+.serviceBox:hover .title:after {
+  opacity: 1;
+  right: 5%;
+}
+.serviceBox .description {
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 27px;
+  color: #6f6f6f;
+}
+.serviceBox .description {
+  display: none;
+}
+
+.serviceBox.active .description {
+  display: block;
+}
+
 /* Portfolio Gallery Styles */
 .portfolio-container {
   margin: 10rem auto 0 auto;
@@ -618,6 +685,19 @@ img {
     width: 600px;
     height: 600px;
   }
+  .serviceBox {
+    margin-bottom: 20px;
+  }
+
+  .skills-container .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills-container .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
 }
 @media (min-width: 920px) {
   .hero-heading {
@@ -670,5 +750,17 @@ img {
   .about-circle {
     width: 700px;
     height: 700px;
+  }
+  .serviceBox {
+    margin-bottom: 30px;
+  }
+  .skills-container .row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .skills-container .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
   }
 }

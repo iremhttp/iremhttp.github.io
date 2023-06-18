@@ -515,6 +515,7 @@ img {
   padding: 40px;
   font-family: "Jura", serif;
 }
+
 .serviceBox {
   text-align: center;
 }
@@ -573,6 +574,78 @@ img {
   line-height: 27px;
   color: #6f6f6f;
 }
+.serviceBox .icons {
+  display: block;
+  text-align: center;
+}
+
+.serviceBox .icons i {
+  display: block;
+  font-size: 40px;
+  margin: 10px auto;
+}
+
+@-webkit-keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes load {
+  0% {
+    stroke-dashoffset: 0;
+  }
+}
+.serviceBox .progress {
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  text-align: center;
+}
+.serviceBox .progress > li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  color: #93a2ac;
+  font-family: Lato;
+  font-weight: 100;
+  margin: 2rem;
+}
+.serviceBox .progress > li:before {
+  content: attr(data-name);
+  position: absolute;
+  width: 100%;
+  bottom: -2rem;
+  font-weight: 400;
+}
+.serviceBox .progress > li:after {
+  content: attr(data-percent);
+  position: absolute;
+  width: 100%;
+  top: 3.7rem;
+  left: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+.serviceBox .progress svg {
+  width: 10rem;
+  height: 10rem;
+}
+.serviceBox .progress svg:nth-child(2) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-90deg);
+}
+.serviceBox .progress svg:nth-child(2) path {
+  fill: none;
+  stroke-width: 25;
+  stroke-dasharray: 629;
+  stroke: #fff;
+  opacity: 0.9;
+  -webkit-animation: load 10s;
+  animation: load 10s;
+}
+
 .serviceBox .description {
   display: none;
 }
@@ -580,7 +653,6 @@ img {
 .serviceBox.active .description {
   display: block;
 }
-
 /* Portfolio Gallery Styles */
 .portfolio-container {
   margin: 10rem auto 0 auto;
@@ -698,6 +770,10 @@ img {
     flex: 0 0 25%;
     max-width: 25%;
   }
+  .serviceBox .icons i {
+    font-size: 60px;
+    margin: 20px;
+  }
 }
 @media (min-width: 920px) {
   .hero-heading {
@@ -762,5 +838,9 @@ img {
   .skills-container .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%;
+  }
+  .serviceBox .icons i {
+    font-size: 80px;
+    margin: 30px;
   }
 }

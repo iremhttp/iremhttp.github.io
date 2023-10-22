@@ -366,6 +366,7 @@ img {
   font-size: 40px;
   margin: 10px;
   box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 @-webkit-keyframes load {
@@ -434,7 +435,7 @@ img {
 .edu-container h1 {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 10rem auto 0 auto;
+  margin: 20rem auto 0 auto;
   padding: 40px;
   font-size: 2rem;
   line-height: 2rem;

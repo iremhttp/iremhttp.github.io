@@ -256,6 +256,7 @@ img {
 }
 .about-text {
   text-align: center;
+  color: #474747;
 }
 .about-text h1 {
   font-size: 1.5rem;
@@ -283,20 +284,20 @@ img {
 .skills-container h1 {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 1rem auto 0 auto;
   padding: 40px;
   font-size: 2rem;
-  line-height: 2rem;
   font-family: "Jura", serif;
+  background-color: #8e4d5c;
 }
 .skills-container {
-  margin: 10rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   padding: 40px;
   font-family: "Jura", serif;
 }
 
 .serviceBox {
   text-align: center;
+  margin: 1rem auto 0 auto;
 }
 .serviceBox .service-icon {
   display: inline-block;
@@ -353,15 +354,18 @@ img {
   line-height: 27px;
   color: #6f6f6f;
 }
-.serviceBox .icons {
-  display: block;
-  text-align: center;
+.serviceBox .description.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .serviceBox .icons i {
-  display: block;
+  display: inline-block;
   font-size: 40px;
-  margin: 10px auto;
+  margin: 10px;
+  box-sizing: border-box;
 }
 
 @-webkit-keyframes load {
@@ -379,15 +383,12 @@ img {
   display: inline-block;
   padding: 0;
   text-align: center;
-  display: none;
 }
 .serviceBox .progress > li {
   display: inline-block;
   position: relative;
   text-align: center;
   color: #93a2ac;
-  font-family: Lato;
-  font-weight: 100;
   margin: 2rem;
 }
 .serviceBox .progress > li:before {
@@ -426,12 +427,6 @@ img {
   animation: load 10s;
 }
 
-.serviceBox .description {
-  display: none;
-}
-.serviceBox.active .description {
-  display: block;
-}
 /* Education Styles */
 @import url("https://fonts.googleapis.com/css?family=Jura:400,500,600");
 @import url("https://fonts.googleapis.com/css?family=K2D:400,500,600");
@@ -439,7 +434,7 @@ img {
 .edu-container h1 {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 1rem auto 0 auto;
+  margin: 10rem auto 0 auto;
   padding: 40px;
   font-size: 2rem;
   line-height: 2rem;
@@ -645,7 +640,7 @@ img {
 
 /* Portfolio Gallery Styles */
 .portfolio-container {
-  margin: 10rem auto 0 auto;
+  margin: 20rem auto 0 auto;
   padding: 40px;
   align-items: center;
   justify-content: center;
